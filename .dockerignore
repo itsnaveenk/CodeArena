@@ -1,0 +1,22 @@
+# Root .dockerignore
+target/
+.mvn/
+*.log
+*.class
+.DS_Store
+.idea/
+.vscode/
+.git/
+.github/
+*.md
+!README.md
+!DOCUMENTATION.md
+.env
+.env.local
+dump.rdb
+data/
+logs/
+frontend/
+*.iml
+mvnw
+mvnw.cmd

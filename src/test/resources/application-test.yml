@@ -1,0 +1,60 @@
+spring:
+  config:
+    activate:
+      on-profile: test
+
+  # H2 Database for testing
+  datasource:
+    url: jdbc:h2:mem:codearena_test;DB_CLOSE_DELAY=-1;MODE=MySQL
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  # JPA Configuration for tests
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+
+  # Embedded MongoDB configuration
+  data:
+    mongodb:
+      database: codearena_test
+
+# Embedded MongoDB version for flapdoodle
+de:
+  flapdoodle:
+    mongodb:
+      embedded:
+        version: 6.0.5
+
+# JWT Configuration for tests
+jwt:
+  secret: test-secret-key-for-jwt-signing-must-be-at-least-32-characters-long
+  expiration: 3600000  # 1 hour for tests
+
+# Judge0 Configuration for tests (mocked)
+judge0:
+  api-url: http://localhost:2358
+  api-key: test-api-key
+  timeout: 5000
+  poll-interval: 100
+
+# Rate Limiting Configuration for tests
+rate-limit:
+  run:
+    max-requests: 10
+    window-seconds: 60
+  submit:
+    max-requests: 5
+    window-seconds: 60
+
+# Logging Configuration for tests
+logging:
+  level:
+    root: WARN
+    com.codearena: DEBUG

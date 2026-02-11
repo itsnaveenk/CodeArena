@@ -1,0 +1,32 @@
+package com.codearena.entity;
+
+import java.util.Arrays;
+
+public enum SupportedLanguage {
+    JAVA(62, "Java (OpenJDK 13.0.1)"),
+    PYTHON(71, "Python (3.8.1)"),
+    CPP(54, "C++ (GCC 9.2.0)");
+
+    private final int judge0Id;
+    private final String displayName;
+
+    SupportedLanguage(int judge0Id, String displayName) {
+        this.judge0Id = judge0Id;
+        this.displayName = displayName;
+    }
+
+    public int getJudge0Id() {
+        return judge0Id;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public static SupportedLanguage fromJudge0Id(int id) {
+        return Arrays.stream(values())
+            .filter(l -> l.judge0Id == id)
+            .findFirst()
+            .orElseThrow(() -> new IllegalArgumentException("Unsupported language ID: " + id));
+    }
+}

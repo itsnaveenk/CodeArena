@@ -1,0 +1,11 @@
+package com.codearena.entity;
+
+public enum AdminAuditAction {
+    USER_ROLE_UPDATED,
+    PROBLEM_PUBLISHED,
+    PROBLEM_REJECTED,
+    PROBLEM_ARCHIVED,
+    PROBLEM_BULK_PUBLISHED,
+    PROBLEM_BULK_REJECTED,
+    PROBLEM_BULK_ARCHIVED
+}
