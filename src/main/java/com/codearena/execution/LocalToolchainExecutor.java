@@ -47,6 +47,7 @@ public class LocalToolchainExecutor {
                 case JAVA -> executeJava(sourceCode, stdin, workDir, effectiveTimeout, maxOutputBytes);
                 case PYTHON -> executePython(sourceCode, stdin, workDir, effectiveTimeout, maxOutputBytes);
                 case CPP -> executeCpp(sourceCode, stdin, workDir, effectiveTimeout, maxOutputBytes);
+                default -> runtimeError("Local execution not supported for: " + language.getDisplayName(), secondsSince(start));
             };
         } catch (IOException e) {
             log.error("Local execution failed (I/O): {}", e.getMessage());

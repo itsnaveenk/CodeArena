@@ -284,7 +284,7 @@ public class SubmissionServiceProperties {
             Arbitraries.strings().alpha().ofLength(24),
             Arbitraries.longs().between(1, 100),
             Arbitraries.longs().between(1, 50),
-            Arbitraries.of(62, 71, 54),
+            Arbitraries.of(62, 71, 54, 63, 4, 74, 60, 73),
             Arbitraries.of(Verdict.class),
             Arbitraries.integers().between(0, 1000)
         ).as((id, userId, problemId, langId, verdict, minutesAgo) -> {

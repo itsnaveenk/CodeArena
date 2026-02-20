@@ -271,7 +271,7 @@ class ExecutionServiceProperties {
     Arbitrary<RunRequest> validRunRequests() {
         return Combinators.combine(
             Arbitraries.longs().between(1, 1000),
-            Arbitraries.of(62, 71, 54),
+            Arbitraries.of(62, 71, 54, 63, 4, 74, 60, 73),
             Arbitraries.strings().alpha().ofMinLength(10).ofMaxLength(100)
         ).as((problemId, languageId, code) -> new RunRequest(problemId, languageId, code, null));
     }
@@ -280,7 +280,7 @@ class ExecutionServiceProperties {
     Arbitrary<SubmitRequest> validSubmitRequests() {
         return Combinators.combine(
             Arbitraries.longs().between(1, 1000),
-            Arbitraries.of(62, 71, 54),
+            Arbitraries.of(62, 71, 54, 63, 4, 74, 60, 73),
             Arbitraries.strings().alpha().ofMinLength(10).ofMaxLength(100)
         ).as(SubmitRequest::new);
     }
