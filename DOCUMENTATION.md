@@ -22,6 +22,36 @@
 14. [Extension Strategies](#extension-strategies)
 15. [Edge Cases](#edge-cases)
 16. [Project Structure](#project-structure)
+17. [What's New](#whats-new)
+
+---
+
+## What's New
+
+### 🎉 Version 1.1.0 - Multi-Language Support
+
+We're excited to announce **expanded language support** for CodeArena! You can now solve problems in **8 popular programming languages**:
+
+| Language | Judge0 ID | Status |
+|----------|-----------|--------|
+| Java | 62 | ✅ Already Supported |
+| Python | 71 | ✅ Already Supported |
+| C++ | 54 | ✅ Already Supported |
+| **JavaScript** | **63** | 🆕 **NEW** |
+| **C** | **4** | 🆕 **NEW** |
+| **TypeScript** | **74** | 🆕 **NEW** |
+| **Go** | **60** | 🆕 **NEW** |
+| **Rust** | **73** | 🆕 **NEW** |
+
+#### Key Features of This Release:
+
+- **Expanded Language Support**: Added 5 new programming languages (JavaScript, C, TypeScript, Go, Rust)
+- **Judge0 Integration**: All languages use Judge0 for secure sandboxed execution
+- **Configurable Limits**: Each language can have custom CPU time and memory limits
+- **Monaco Editor**: Full syntax highlighting and auto-completion for all supported languages
+- **Extensible Architecture**: Easy to add more languages following the extension strategies outlined in this document
+
+> This release brings the total supported languages to **8**, enabling more diverse problem-solving experiences!
 
 ---
 
@@ -1308,6 +1338,54 @@ Page<Submission> submissions = submissionRepository.findByUserId(
 ---
 
 ## Extension Strategies
+
+### Supported Programming Languages
+
+CodeArena currently supports **8 programming languages** for problem solving:
+
+| Language | Judge0 ID | Monaco Language | File Extension | Status |
+|----------|-----------|-----------------|----------------|--------|
+| Java | 62 | java | .java | ✅ Supported |
+| Python | 71 | python | .py | ✅ Supported |
+| C++ | 54 | cpp | .cpp | ✅ Supported |
+| **JavaScript** | **63** | javascript | .js | 🆕 NEW |
+| **C** | **4** | c | .c | 🆕 NEW |
+| **TypeScript** | **74** | typescript | .ts | 🆕 NEW |
+| **Go** | **60** | go | .go | 🆕 NEW |
+| **Rust** | **73** | rust | .rs | 🆕 NEW |
+
+#### Language Configuration
+
+Each language can be configured with specific resource limits in `application.yml`:
+
+```yaml
+execution:
+  language-limits:
+    62:  # Java
+      cpu-time-limit: 3
+      memory-limit: 512
+    71:  # Python
+      cpu-time-limit: 5
+      memory-limit: 256
+    54:  # C++
+      cpu-time-limit: 2
+      memory-limit: 512
+    63:  # JavaScript
+      cpu-time-limit: 3
+      memory-limit: 256
+    4:   # C
+      cpu-time-limit: 2
+      memory-limit: 256
+    74:  # TypeScript
+      cpu-time-limit: 3
+      memory-limit: 512
+    60:  # Go
+      cpu-time-limit: 3
+      memory-limit: 512
+    73:  # Rust
+      cpu-time-limit: 3
+      memory-limit: 512
+```
 
 ### Adding New Programming Language
 

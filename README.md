@@ -16,6 +16,27 @@
 
 ---
 
+## 📢 What's New
+
+### 🎉 Version 1.1.0 - Multi-Language Support
+
+We're excited to announce **expanded language support** for CodeArena! You can now solve problems in **7 popular programming languages**:
+
+| Language | Judge0 ID | Status |
+|----------|-----------|--------|
+| Java | 62 | ✅ Already Supported |
+| Python | 71 | ✅ Already Supported |
+| C++ | 54 | ✅ Already Supported |
+| **JavaScript** | **63** | 🆕 **NEW** |
+| **C** | **4** | 🆕 **NEW** |
+| **TypeScript** | **74** | 🆕 **NEW** |
+| **Go** | **60** | 🆕 **NEW** |
+| **Rust** | **73** | 🆕 **NEW** |
+
+> This release brings the total supported languages to **8**, with more languages coming soon!
+
+---
+
 ## 💡 What is CodeArena?
 
 CodeArena is a LeetCode-inspired competitive programming platform built to handle the complexities of **secure code execution at scale**. It demonstrates real-world engineering around async task processing, sandboxed environments, intelligent caching, and rate limiting—all without relying on third-party execution services.
@@ -37,7 +58,7 @@ CodeArena is a LeetCode-inspired competitive programming platform built to handl
 ### 🔒 Secure Sandboxed Execution
 - **Containerized execution** — Every submission runs in isolated Docker container
 - **Resource limits** — CPU time (2s), memory (256MB), no network access
-- **Multi-language support** — Java, Python, C++, JavaScript (extensible to 62+ languages)
+- **Multi-language support** — Java, Python, C++, JavaScript, C, TypeScript, Go, Rust (extensible to 62+ languages)
 - **Fallback mechanism** — Local toolchain when Judge0 unavailable
 
 ### 🏁 Contest System

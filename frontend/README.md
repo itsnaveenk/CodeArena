@@ -1,73 +1,88 @@
-# React + TypeScript + Vite
+# CodeArena Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, feature-rich competitive programming platform built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Multi-Language Support
+CodeArena supports multiple programming languages for solving coding challenges:
 
-## React Compiler
+- **JavaScript** - Full ES6+ support
+- **TypeScript** - Type-safe JavaScript
+- **C** - Low-level programming support
+- **Go** - Google's Go programming language
+- **Rust** - Safe and performant systems programming
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Core Features
+- User authentication and authorization
+- Problem solving with online code editor
+- Code execution and testing
+- Contest management and participation
+- Leaderboards and rankings
+- Admin dashboard for problem moderation
+- Real-time submission monitoring
 
-## Expanding the ESLint configuration
+## What's New
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Latest Updates (v1.0.0)
+- **Multi-Language Support**: Added support for 5 new programming languages (JavaScript, C, TypeScript, Go, Rust)
+- **Enhanced Code Editor**: Improved code editor with syntax highlighting and language-specific features
+- **Improved Execution Panel**: Better code execution results display with detailed output
+- **Language Selector**: Easy language switching in the code editor
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Previous Versions
+- Initial release with basic problem-solving functionality
+- User authentication system
+- Contest management features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Run tests
+npm run test
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+frontend/
+├── src/
+│   ├── components/     # React components
+│   ├── pages/          # Page components
+│   ├── hooks/          # Custom React hooks
+│   ├── lib/            # Utilities and API client
+│   ├── assets/         # Static assets
+│   └── App.tsx         # Main application component
+├── public/             # Public assets
+└── package.json        # Dependencies
+```
+
+## Tech Stack
+
+- **Framework**: React 18+
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **State Management**: TanStack Query
+- **Forms**: React Hook Form + Zod
+- **UI Components**: Radix UI
+- **Code Editor**: CodeMirror/Monaco Editor
+
+## License
+
+See the main project README for license information.
