@@ -195,6 +195,11 @@ export const SUPPORTED_LANGUAGES = [
   { id: 62, name: 'Java', monacoLanguage: 'java', extension: '.java' },
   { id: 71, name: 'Python 3', monacoLanguage: 'python', extension: '.py' },
   { id: 54, name: 'C++', monacoLanguage: 'cpp', extension: '.cpp' },
+  { id: 63, name: 'JavaScript', monacoLanguage: 'javascript', extension: '.js' },
+  { id: 4, name: 'C', monacoLanguage: 'c', extension: '.c' },
+  { id: 74, name: 'TypeScript', monacoLanguage: 'typescript', extension: '.ts' },
+  { id: 60, name: 'Go', monacoLanguage: 'go', extension: '.go' },
+  { id: 73, name: 'Rust', monacoLanguage: 'rust', extension: '.rs' },
 ] as const;
 
 export type LanguageId = typeof SUPPORTED_LANGUAGES[number]['id'];

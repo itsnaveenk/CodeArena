@@ -94,6 +94,54 @@ using namespace std;
 int main() {
     return 0;
 }`;
+    case 63: // JavaScript
+      return `// JavaScript Solution
+function solution(input) {
+    // Your code here
+    return result;
+}
+
+// Read input
+const input = require('fs').readFileSync(0, 'utf-8').trim().split('\n');
+console.log(solution(input));`;
+    case 4: // C
+      return `// C Solution
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    // Your code here
+    return 0;
+}`;
+    case 74: // TypeScript
+      return `// TypeScript Solution
+function solution(input: string[]): string {
+    // Your code here
+    return result;
+}
+
+const input = require('fs').readFileSync(0, 'utf-8').trim().split('\n');
+console.log(solution(input));`;
+    case 60: // Go
+      return `// Go Solution
+package main
+
+import (
+    "bufio"
+    "fmt"
+    "os"
+)
+
+func main() {
+    // Your code here
+}`;
+    case 73: // Rust
+      return `// Rust Solution
+use std::io::{self, Read};
+
+fn main() {
+    // Your code here
+}`;
     default:
       return '';
   }
